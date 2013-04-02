@@ -67,18 +67,62 @@
 
 </head>
 <body>
-  <h1>Part 1: Making Objects That Look Like Rubbish</h1>
+  <h1>Part 2: The Box Model</h1>
+  <p>Every element on ever webpage thats ever been built it made of rectangles (and squares if you really want to get nit picky).  I know you think you've seen circles in web pages, but you haven't.  Those are rectangles that a developer made look like circles.</p>
+  <p>This is something difficult to explain, but it goes something like this:</p>
+  <img src="../assets/images/box-model.gif">
+  <p>Lets play with the box model a little and start to get a feel for it.  We'll start with our example from the previous chapter.</p>
+  <br/>
+  <code>&lt;div style="background:blue"&gt; some stuff &lt;/div&gt;</code>
+  <div style="background:blue"> some stuff </div>
+  <p>Lets set some sizing properties.</p>
   <br/>
   <br/>
   <br/>
   <br/>
   <br/>
   <br/>
-  <p>Now that you know a few properties This brings us to Lab #1.  Open the template file in the "lab" folder and do the following:</p>
+  <h2>Width &amp; Height:</h2>
+  <code>&lt;div style="background:blue; <span>width:200px; height:200px;</span>"&gt; some stuff &lt;/div&gt;</code>
+  <div style="background:blue; width:200px; height:200px;"> some stuff </div>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <h2>Padding:</h2>
+  <code>&lt;div style="background:blue; width:200px; height:200px; <span>padding:20px;</span>"&gt; some stuff &lt;/div&gt;</code>
+  <div style="background:blue; width:200px; height:200px; padding:20px;"> some stuff </div>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <h2>Border</h2>
+  <code>&lt;div style="background:blue; width:200px; height:200px; padding:20px; <span>border:5px solid red;</span>"&gt; some stuff &lt;/div&gt;</code>
+  <div style="background:blue; width:200px; height:200px; padding:20px; border:5px solid red;"> some stuff </div>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <h2>Margin:</h2>
+  <code>&lt;div style="background:blue; width:200px; height:200px; border:5px solid red; padding:20px; <span>margin:40px;</span>"&gt; some stuff &lt;/div&gt;</code>
+  <div style="background:blue; width:200px; height:200px; padding:20px; border:5px solid red; margin:40px;"> some stuff </div>
+  <br/>
+  <p>Notice how the padding moved the text within the blue box, but the margin moved the blue box?</p>
+
+  <p>Now that you know a few properties This brings us to Lab #2.  Open the template file in the "lab" folder and do the following:</p>
   <ol>
-    <li>Add a &lt;div&gt; object to the page.</li>
-    <li>Put your name in the between the opening and closing tags</li>
-    <li>Change the use the CSS property "color" to change the color to blue</li>
+    <li>Create an object on the page with nothing in it.</li>
+    <li>Add a background color.</li>
+    <li>Give the element a width of 500px, a height of 600px, a padding of 30px and a margin of 30px.</li>
   </ol>
   <p><a href="part-3.html">Next</a></p>
 
