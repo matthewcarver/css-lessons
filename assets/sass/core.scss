@@ -1,0 +1,399 @@
+
+@import 'compass';
+// Core Styles
+
+// This is the mobile first core layout, module, state styles.
+
+@import "_base";
+// @import "_font-awesome"; 
+@import "_colors"; 
+@import "_mixins";
+
+
+// Table of Contents
+// 
+//
+// 01 - layout (l-*)
+// 02 - module  (m-*)
+// 03 - state  (is-*)
+
+
+@-webkit-keyframes colorPulse {
+   0% {background-color: rgba(255,255,255,0.25);} 
+   100% {background-color: rgba(255,255,255,0.0);}
+}
+
+@-webkit-keyframes colorPulseScrewed {
+   0% {
+    background-color: rgba(0,0,0,0.35);
+  } 
+   100% {
+    background-color: rgba(0,0,0,0.0);
+  }
+}
+
+@-webkit-keyframes textScrewed {
+   0% {
+    -webkit-transform:rotate(-5deg);
+  } 
+   100% {
+    -webkit-transform:rotate(5deg);
+  }
+}
+
+// 
+    
+
+
+// ************************
+// ************************
+// ************************
+//
+// 01 - layout (l-*)
+//
+// ************************
+// ************************
+// ************************
+
+body{
+
+background-color:$light-blue;
+}
+
+.l-middle-float{
+  $size:10em;
+
+  position:absolute;
+  top:200px;
+  z-index:99;
+
+  width:70%;
+  padding:100px 5%;
+
+  margin:0 10%;
+
+
+  background-color:#fff;
+  
+  h2, h3{text-align:center; padding: 50px 0 40px;}
+
+  p{ 
+    vertical-align: middle; 
+    text-align: center;
+    color:#000;
+    font-size:16px;
+    text-align:center;
+    margin-bottom:12px;
+
+    &:first-child{
+
+    }
+  }
+
+}
+
+
+// ************************
+// ************************
+// ************************
+//
+// 02 - module  (m-*)
+//
+// ************************
+// ************************
+// ************************
+#context, #duties{
+  z-index:9999;
+}
+
+#check{
+  font-size:.8em;
+}
+
+.m-icon-block{
+  $size:3em;
+
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+
+  width:100%;
+  height:$size;
+  padding-top:$size/6;
+  
+  background-color:$black;
+  text-align:center;
+
+
+  .text{
+    position: relative;
+    top: -0.25em;
+    color:#3f3f3f;
+  }
+
+  span, embed{
+    margin:0 0.25em;
+  }
+
+}//.m-icon-block
+
+.m-panel{
+  $size:10em;
+  
+  width:$size;
+  margin:$size/5 auto;
+  padding:$size/20;
+
+  background-color:$darkgrey;
+
+  h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:$size/20;
+  }
+
+}
+
+#context{
+  position:absolute;
+  top:0;
+  display: table; 
+  width:100%;
+
+  background:$black;
+
+  h1{
+    display: table-cell; 
+    vertical-align: middle;
+
+    padding-left:1.71875em;
+    color:#fff;
+    font-size:0.75em;
+    font-weight:normal;
+  }
+}
+
+
+.m-header-nav{
+  $size:20em;
+
+  position:relative;
+  right:0;
+  display: table-cell;
+
+  width:$size;
+  height:$size/10;
+
+
+  .m-white{
+    position:absolute;
+    right:0;
+    top: 0;
+    bottom:0;
+
+    width:$size/3;
+    padding-top:0.25em;
+
+    background-color:#fff;
+    text-align:center;
+
+    .month{
+      display:block;
+      font-size:0.5em;
+    }
+
+  }
+
+  .m-header-btn{
+    position:relative;
+    width:$size/3.5;
+    float:left;
+
+    padding: 0.5em 0.5em 0.5em 1.5em;
+    margin:0.5em;
+
+
+    font-size:0.75em;
+    color:$darkgrey;
+    outline:3px solid $darkgrey;
+    text-align:right;
+
+    &:before{
+      content: '';
+      position:absolute;
+      left:0.85em;
+      top:0.25em;
+
+      width:1.5em;
+      height:1.5em;
+      display:block;
+
+      background-image:url(../images/cleanie.svg);
+      background-size:auto 100%;
+      background-repeat:no-repeat;
+      background-position:center center;
+
+      cursor:hand;
+      cursor:pointer;
+    }
+
+    &#liveFeed{
+      &:before{
+        background-image:url(../images/eye.svg);
+        background-size:100% auto;
+      }
+    }
+
+  }
+
+}// header nav
+
+
+
+#settings{
+  position:absolute;
+  bottom:1.75em;
+  right:1.75em;
+  z-index:9999;
+
+  &.is-active{
+    path{
+      fill:#fff !important;
+    }
+  }
+
+}
+
+
+
+
+#adminPanel{
+  position:absolute;
+  z-index:999;
+  top:100%;
+
+  width:100%;
+  height:100%;
+
+  background-color:rgba(255,255,255,0.9);
+
+  @include transition(top 0.5s);
+
+  &.is-active{
+    top:0;
+  }
+
+  .l-middle-float{background-color:transparent;}
+
+
+  .row{
+    margin-bottom:0.90625em;
+
+    span{
+      width:9em;
+      padding-right:1em;
+      display:block;
+      float:left;
+      text-align:right;
+    }
+
+    input[type="radio"]{
+      display:none;
+    }
+
+    label{
+      float:left;
+
+      padding:1em;
+
+      margin-top:-0.25em;
+
+      background-color:$black;
+
+      font-size:0.5em;
+      color:$darkgrey;
+
+    }
+
+    input[type="radio"]:checked + label{
+      
+      &.clean{
+        background-color:#4debe5;
+        color:#fff;
+      }
+
+      &.dirty{
+        background-color:#ff0000;
+        color:#fff;
+      }
+
+    }
+
+
+  }
+
+}
+
+// ************************
+// ************************
+// ************************
+//
+// 03 - state  (is-*)
+//
+// ************************
+// ************************
+// ************************
+
+.m-header-btn.is-active{
+  background:$darkgrey;
+  color:$black;
+
+  &#cleanies:before{background-image:url(../images/cleanie-active.svg);}
+  &#liveFeed:before{background-image:url(../images/eye-active.svg);}
+}
+
+
+#animated{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:9;
+
+}
+
+.is-clean{
+  @include gradient(  $light-blue, #fff);
+  #animated{-webkit-animation: colorPulse 10s infinite alternate;}
+}//.is-clean
+
+.is-getting-dirty{
+  @include gradient( #fcf9a6, #5af5f3);
+  #animated{-webkit-animation: colorPulse 10s infinite alternate;}
+}//.is-getting-dirty
+
+.is-dirty{
+  @include gradient( #fd9940, #fcf9a6);
+  #animated{-webkit-animation: colorPulse 5s infinite alternate;}
+}//.is-dirty
+
+.is-dirtier{
+  @include gradient( #ff0000, #fd9940);
+  #animated{-webkit-animation: colorPulseScrewed 3s infinite alternate;}
+}//.is-dirtier
+
+.is-screwed{
+  @include gradient( #ff0000, #ff0000);
+  #names{-webkit-animation: textScrewed 0.2s infinite alternate;}
+  #animated{-webkit-animation: colorPulseScrewed 1s infinite alternate;}
+}//.is-screwed
+
+.is-live{
+  background-image:url(../images/live.jpg);
+  background-size:cover;
+
+  #names{display:none;}
+
+}

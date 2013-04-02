@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS Training</title>
+  
+  <!-- meta data -->
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+
+  <style type="text/css">
+    /* INSTRUCTIONAL STYLES */
+    #lower{
+      margin:200px 0;
+    }
+
+    code{
+      display:block;
+      padding:10px;
+
+      background:#eee;
+    }
+
+    code span{
+      color:blue;
+    }
+
+  </style>
+
+
+  <style type="text/css">
+    html{
+      background:#b4d7e7;
+    }
+    body{
+      width:50%;
+      margin:0 auto;
+      font-family:Helvetica, sans-serif;
+      text-shadow:0 1px 0 #fff;
+    }
+
+    h1{
+      color:#333;
+    }
+
+    p{
+      font-weight: bold;
+      font-size:20px;
+    }
+
+    a{
+      color:#666;
+    }
+
+    div{
+      text-shadow:none;
+    }
+
+    ol{
+      background-color: #eee;
+      padding:10px 40px;
+    }
+
+    li{
+      padding-bottom:5px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Part 1: Making Objects That Look Like Rubbish</h1>
+  <p>The first and most direct way to give and object a style is inline. To write inline styles you add <b>style=""</b> to the object.  So this:</p>
+  <code>&lt;div&gt; some stuff &lt;/div&gt;</code>
+  <p>Which looks like this in the browser</p>
+  <div> some stuff </div>
+  <p>Becomes:</p>
+  <code>&lt;div style="background:blue"&gt; some stuff &lt;/div&gt;</code>
+  <p>Which looks like this in the browser</p>
+  <div style="background:blue"> some stuff </div>
+  <h2>Let's make this more useful</h2>
+  <p>There is a huge amount of things you can control with CSS, too many to list here but there are plenty of cheat sheets online.  Rules are applied in a specific format (also called a syntax). The syntax for CSS is [property]:[rule];.</p>
+  <p><b>"Property"</b> is the way in which an object is affected</p>
+  <p><b>"Rule"</b> is how the property is applied</p>
+  <p>We're going use a few practical examples of some rules and their affects.</p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <p><b>BACKGROUND COLOR</b></p>
+  <p>Description: <i>"background-color" adjusts the color of the object.  Colors can be set using hex values or </i></p>
+  <code>&lt;div style="<span>background:blue;</span>"&gt; some stuff &lt;/div&gt;</code>
+  <p>Produces</p>
+  <div style="background:blue;"> some stuff </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <p><b>COLOR</b></p>
+  <p>Description: <i>"color" adjusts the color of the text within an object.</i></p>
+  <code>&lt;div style="background:blue; <span>color:red;</span>"&gt; some stuff &lt;/div&gt;</code>
+  <p>Produces</p>
+  <div style="background:blue; color:red;"> some stuff </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <p><b>FONT-SIZE</b></p>
+  <p>Description: <i>"font-size" adjusts the size of the text within an object.</i></p>
+  <code>&lt;div style="background:blue; color:red; <span> font-size:40px;</span>"&gt; some stuff &lt;/div&gt;</code>
+  <p>Produces</p>
+  <div style="background:blue; color:red; font-size:40px;"> some stuff </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <p>Now that you know a few properties This brings us to Lab #1.  Open the template file in the "lab" folder and do the following:</p>
+  <ol>
+    <li>Add a &lt;div&gt; object to the page.</li>
+    <li>Put your name in the between the opening and closing tags</li>
+    <li>Change the use the CSS property "color" to change the color to blue</li>
+  </ol>
+  <p><a href="part-2.html">Next</a></p>
+
+  <code id="lower">
+    <b>CSS on this page:</b><br/><br/>
+
+    <span>html</span>{<br/>
+      background:#b4d7e7;<br/>
+    }<br/>
+    <br/>
+    <span>body</span>{<br/>
+      width:50%;<br/>
+      margin:0 auto;<br/>
+      font-family:Helvetica, sans-serif;<br/>
+      text-shadow:0 1px 0 #fff;<br/>
+    }<br/>
+<br/>
+    <span>h1</span>{<br/>
+      color:#333;<br/>
+    }<br/>
+<br/>
+    <span>p</span>{<br/>
+      font-weight: bold;<br/>
+      font-size:20px;<br/>
+    }<br/>
+<br/>
+    <span>a</span>{<br/>
+      color:#666;<br/>
+    }<br/>
+<br/>
+
+    <span>div</span>{<br/>
+      text-shadow:none;<br/>
+    }<br/>
+</br>
+    <span>ol</span>{<br/>
+      background-color: #eee;<br/>
+      padding:10px 40px;<br/>
+    }<br/>
+<br/>
+    <span>li</span>{<br/>
+      padding-bottom:5px;<br/>
+    }<br/>
+
+  </code>
+
+</body>
+</html>

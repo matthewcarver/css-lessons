@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS Training</title>
+  
+  <!-- meta data -->
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+
+  <style type="text/css">
+    /* INSTRUCTIONAL STYLES */
+    code{
+      position:relative;
+      display:block;
+      margin:200px 0;
+      padding:10px;
+
+      background:#eee;
+    }
+
+    code span{
+      color:blue;
+    }
+
+  </style>
+
+
+  <style type="text/css">
+
+  @-webkit-keyframes font-color{
+    from{
+      color:red;
+    }
+    to{
+      color:blue;
+    }
+  }
+  
+  @-webkit-keyframes spinner{
+    from{
+      -webkit-transform: rotate(0deg); 
+    }
+    to{
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+
+
+  .marquee{
+    -webkit-marquee: auto medium infinite scroll normal;   
+    overflow-x: -webkit-marquee;  
+  }
+
+  .marquee{
+    font-size:40px;
+  }
+
+    html{
+      background: #ff2828; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ff2828 0%, #fcf528 16%, #37ff28 35%, #27f9f9 57%, #282fff 74%, #f428ff 86%, #ff2828 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ff2828), color-stop(16%,#fcf528), color-stop(35%,#37ff28), color-stop(57%,#27f9f9), color-stop(74%,#282fff), color-stop(86%,#f428ff), color-stop(100%,#ff2828)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #ff2828 0%,#fcf528 16%,#37ff28 35%,#27f9f9 57%,#282fff 74%,#f428ff 86%,#ff2828 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #ff2828 0%,#fcf528 16%,#37ff28 35%,#27f9f9 57%,#282fff 74%,#f428ff 86%,#ff2828 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #ff2828 0%,#fcf528 16%,#37ff28 35%,#27f9f9 57%,#282fff 74%,#f428ff 86%,#ff2828 100%); /* IE10+ */
+background: linear-gradient(135deg, #ff2828 0%,#fcf528 16%,#37ff28 35%,#27f9f9 57%,#282fff 74%,#f428ff 86%,#ff2828 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2828', endColorstr='#ff2828',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    body{
+      width:50%;
+      margin:0 auto;
+      font-family:Helvetica, sans-serif;
+      text-shadow:0 1px 0 #fff;
+    }
+
+    h1{
+      color:#333;
+      -webkit-animation: font-bounce 1s infinite alternate;
+    }
+
+    p{
+      font-weight: bold;
+      font-size:20px;
+    }
+
+    a{
+      color:#666;
+    }
+
+    code{
+      -webkit-animation: spinner 1s infinite alternate;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Part 3: CSS Gone Crazy</h1>
+  <div class="marquee"><h2>Completely Worthless!!!!</h2></div> 
+  <p><a href="/lesson1/intro-4.html">Get out now!</a>.
+  
+  <code>
+    <b>CSS in this example:</b><br/><br/>
+
+    <b>Don't even worry about it.</b>
+
+
+  </code>
+
+</body>
+</html>
