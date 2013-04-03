@@ -50,14 +50,84 @@
     a{
       color:#666;
     }
+
+    div{
+      text-shadow:none;
+    }
+
+    ol{
+      background-color: #eee;
+      padding:10px 40px;
+    }
+
+    li{
+      padding-bottom:5px;
+    }
   </style>
 
 </head>
 <body>
-  <h1>Part 3: Making Objects Look (Less) Like Pure Shit</h1>
-    
+  <h1>Part 3: Adding Styles with Classes and IDS</h1>
+  <p>Adding a background color to a div is a beginning, but there are a myriad of rules an object can be given and an infinite way to apply rules to objects to produce a website.</p>
+  <p>Inline styles is one way, but adding a class or an ID is a better way</p>
+  <p>To add a class to an object you simply add the attribute of "class", like this:</p>
+  <code>&lt;div class="some-class"&gt; some stuff &lt;/div&gt;</code>
+  <p>Classes are identifiers for CSS to hook into.  It draws a connection between CSS and an object.  It's like the hookshot in Legend of Zelda, but with code.</p>
+  <p>We can then add a style object to the page using the &lt;style&gt; tag.</p>
 
-  <p><a href="part-3.html">Next</a></p>
+  <code>
+    &lt;style&gt;<br/>
+    &lt;/style&gt;<br/>
+    &lt;div class="some-class"&gt; some stuff &lt;/div&gt;
+  </code>
+
+  <p>We can hook styles in a style object to objects on the page via the class.  In order to drawn the connection, a period is used.</p>
+
+  <code>
+    &lt;style&gt;<br/>
+    &nbsp;&nbsp;.some-class{background:blue;}</br>
+    &lt;/style&gt;<br/>
+    </br>
+    &lt;div class="some-class"&gt; some stuff &lt;/div&gt;
+  </code>
+  <style>
+    .some-class{background:blue;}
+  </style>
+  <div class="some-class"> some stuff </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <p>We can also use the ID attribute to select an element on the page</p>
+
+  <code>
+    &lt;style&gt;<br/>
+    &nbsp;&nbsp;.some-class{background:blue;}</br>
+    &nbsp;&nbsp;<span>#someID{background-color:red;}</span><br/>
+    &lt;/style&gt;<br/>
+    </br>
+    &lt;div id="someID" class="some-class"&gt; some stuff &lt;/div&gt;
+  </code>
+  <style>
+    .some-class{background:blue;}
+    #someID{background-color:red;}
+  </style>
+  <div id="someID" class="some-class"> some stuff </div>
+
+  <p>ID's can be used in tamdem with classes but notice about how the ID overrides the class.  This is because IDs hold move weight than classes.  This is because they are meant to be unique to their object.  A good rule of thumb is that there can only be one ID per page.</p>
+  <p>When writing CSS in this manner, the hooks from CSS to HTML are called "selectors".</p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <p>Now that you know a few properties This brings us to Lab #3.  Open the template file in the "lab" folder and do the following:</p>
+  <ol>
+    <li>Create an object on the page with your name in it.</li>
+    <li>Add a background color using a class selector.</li>
+  </ol>
 
   <code id="lower">
     <b>CSS on this page:</b><br/><br/>
@@ -85,7 +155,20 @@
     <span>a</span>{<br/>
       color:#666;<br/>
     }<br/>
+<br/>
 
+    <span>div</span>{<br/>
+      text-shadow:none;<br/>
+    }<br/>
+</br>
+    <span>ol</span>{<br/>
+      background-color: #eee;<br/>
+      padding:10px 40px;<br/>
+    }<br/>
+<br/>
+    <span>li</span>{<br/>
+      padding-bottom:5px;<br/>
+    }<br/>
 
   </code>
 
