@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="designers">
+<head>
+  <title>CSS Training</title>
+  
+  <!-- meta data -->
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../assets/css/core.css">
+
+</head>
+<body>
+  <h1>Just kidding, no there isn't.</h1>
+  <p>Unfortunately there is no easy way to overcome the need for relative measurement. Even if you could you would still need it for responsive design.  The only option is to <b>Embrace it</b>.</p>
+  <p>Relative measurement is accomplished in CSS through percentages and EMs.  Size percentages are always relative to their parent object.  Let's say for instance that you have a box on the page that contains another box.  The mark up would look like this:</p>
+  <code>
+    &lt;div style="width:500px; background:red;"&gt;<br/>
+    &nbsp;&nbsp;&lt;div style="width:50%; background:#ccc;"&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;some stuff<br/>
+    &nbsp;&nbsp;&lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+  </code>
+  <p>Which produces:</p>
+  <div style="width:500px; background:red;">
+    <div style="width:50%; background:#ccc;">
+      some stuff
+    </div>
+  </div>
+  <p>Here the grey box is 50% of the larger, 500px box. You can even go a level deeper.</p>
+  <code>
+    &lt;div style="width:500px; background:red;"&gt;<br/>
+    &nbsp;&nbsp;&lt;div style="width:50%; background:#ccc;"&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:50%; background:#666;"&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;some stuff<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+    &nbsp;&nbsp;&lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+  </code>
+  <div style="width:500px; background:red;">
+    <div style="width:50%; background:#ccc;">
+      <div style="width:50%; background:#666;">
+        some stuff
+      </div>
+    </div>
+  </div>
+  <p>In this the dark grey box is half the light grey box which is half the red box.</p>
+  <p>This is how relative units work.  To see percentages in Photoshop, it's simply a matter of adjusting youre project settings.</p>
+  <p><img src="screenshot-001.png" width="500px"></p>
+  <p>With this you can marquee a selection and your information panel will show the percentage instead of the pixels</p>
+  <p><img src="screenshot-002.png" width="500px"></p>
+  <p>It's important to know that the layers percentage is only in context of the document.</p>
+  <a href="units-04.html" class="next-button">What about EM?</a>
+  
+</body>
+</html>

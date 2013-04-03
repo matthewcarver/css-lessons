@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="designers">
+<head>
+  <title>CSS Training</title>
+  
+  <!-- meta data -->
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../assets/css/core.css">
+
+</head>
+<body>
+  <h1>Using EM.</h1>
+  <p>EM works similiarly to percentages, but for text. 1em is equal to the next parent's font size.  For example:</p>
+  <code>
+    &lt;p style="font-size:40px;"&gt;<br/>
+    &nbsp;&nbsp;Big text &lt;span&gt;small text&lt;/span&gt;<br/>
+    &lt;/p&gt;<br/>
+  </code>
+  <p style="font-size:40px;">
+    Big text <span>small text</span>
+  </p>
+
+  <p>All the text here is the same size, but if we add the em font style to the span inside the paragraph tag.</p>
+  <code>
+    &lt;p style="font-size:40px;"&gt;<br/>
+    &nbsp;&nbsp;Big text &lt;span style="font-size:0.5em"&gt;small text&lt;/span&gt;<br/>
+    &lt;/p&gt;<br/>
+  </code>
+
+  <p style="font-size:40px;">
+    Big text <span style="font-size:0.5em">small text</span>
+  </p>
+
+  <p>Now the small text is smaller.  Let's say we want to expand the kerning in the small text.</p>
+
+  <code>
+    &lt;p style="font-size:40px;"&gt;<br/>
+    &nbsp;&nbsp;Big text &lt;span style="font-size:0.5em; letter-spacing:0.3em;"&gt;small text&lt;/span&gt;<br/>
+    &lt;/p&gt;<br/>
+  </code>
+<p style="font-size:40px;">
+  Big text <span style="font-size:0.5em; letter-spacing:0.3em;">small text</span>
+</p>
+  <p>Or leading</p>
+
+  <code>
+    &lt;p style="font-size:40px; line-height:2em;"&gt;<br/>
+    &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/>
+    &lt;/p&gt;<br/>
+  </code>
+  <p style="font-size:40px; line-height:2em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+  <p>The important thing to note here is that all the content on the page is sized relative to something, and what that thing is isolated to the browser it's working in.</p>
+  <p></p>
+
+  <a href="units-05.html" class="next-button">What about EM?</a>
+  
+</body>
+</html>
