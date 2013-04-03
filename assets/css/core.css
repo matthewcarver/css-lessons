@@ -2,6 +2,11 @@
   background:url(../images/bkg.gif);
 }
 
+.demo-wrapper{
+  padding:20px;
+  background:url(../images/bkg.gif);
+}
+
 .designers body{
   width:600px;
   padding:50px;
