@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="designers">
+<head>
+  <title>CSS Training</title>
+  
+  <!-- meta data -->
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../assets/css/core.css">
+
+</head>
+<body>
+  <h1>Gradients</h1>
+  <p>Gradients can be one of the easier properties to convert from PS to CSS.  A big reason why is because they don't rely on strict units of measurement.</p>
+  <img src="screenshot-005.png" width="600px">
+  <code>
+    .demo001{</br>
+      background-image: linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);<br/>
+      background-image: -o-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);<br/>
+      background-image: -moz-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);<br/>
+      background-image: -webkit-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);<br/>
+      background-image: -ms-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);<br/>
+      <br/>
+      background-image: -webkit-gradient(<br/>
+        linear,<br/>
+        left bottom,<br/>
+        right bottom,<br/>
+        color-stop(0.06, rgb(17,142,200)),<br/>
+        color-stop(0.8, rgb(217,30,117))<br/>
+      );<br/>
+      padding:10px;<br/>
+    }</br>
+</br>
+    &lt;div class="demo001"some stuff&gt;&lt;/div&gt;
+  </code>
+  <style>
+    .demo001{
+      background-image: linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);
+      background-image: -o-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);
+      background-image: -moz-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);
+      background-image: -webkit-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);
+      background-image: -ms-linear-gradient(left , rgb(17,142,200) 6%, rgb(217,30,117) 80%);
+      
+      background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        right bottom,
+        color-stop(0.06, rgb(17,142,200)),
+        color-stop(0.8, rgb(217,30,117))
+      );
+      padding:10px;
+    }
+  </style>
+
+  <div class="demo-wrapper">
+    <div class="demo001">some stuff</div>
+  </div>
+
+  <p>Much of the ease of creating CSS gradients is thanks to online <a href="http://gradients.glrzad.com/">CSS gradient generators</a>.</p>
+
+</body>
+</html>

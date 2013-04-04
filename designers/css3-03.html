@@ -12,58 +12,85 @@
 </head>
 <body>
   <h1>Drop Shadows</h1>
-  <p>Drop Shadows come it two forms, box-shadows and text-shadows</p>
+  <p>Drop Shadows come it two forms, box-shadows and text-shadows.  Box shadows can be applied to boxes and text shadows applied to text.  Both properties need a horizonal offset, vertical offset, blur, spread, and color.  Colors can be Hex, RGB, or RGBA.</p>
   <code>
     .demo001{</br>
-      background-color: blue;</br>
-      opacity:0.3;</br>
+      background:#fff;</br>
+      padding:10px;</br>
+      box-shadow:5px 5px #000;</br>
     }</br>
 </br>
     &lt;div class="demo001"some stuff&gt;&lt;/div&gt;
   </code>
   <style>
     .demo001{
-      background-color: blue;
-      opacity:0.3;
+      background:#fff;
+      padding:10px;
+      box-shadow:5px 5px #000;
     }
   </style>
 
   <div class="demo-wrapper">
     <div class="demo001">some stuff</div>
   </div>
-  <p>Once something has opacity, all it's contents are also opaque.  This is handy in animations especially and can be used to accomplish native CSS fades.  Alpha transparent backgrounds are better accomplished like this:</p>
-  <code>
+  
+  <p>Text-shadow much the same way</p>
+
+<code>
     .demo002{</br>
-      background-color: rgba(17,142,200,0.5);</br>
-      opacity:0.3;</br>
-      color:#000;</br>
+      background:#fff;<br/>
+      padding:10px;<br/>
+      color:red;<br/>
+      text-shadow:2px 2px #000;<br/>
     }</br>
 </br>
     &lt;div class="demo002"some stuff&gt;&lt;/div&gt;
   </code>
   <style>
     .demo002{
-      background-color: rgba(17,142,200,0.5);
-      color:#000;
+      background:#fff;
+      padding:10px;
+      color:red;
+      text-shadow:2px 2px #000;
     }
   </style>
+
   <div class="demo-wrapper">
     <div class="demo002">some stuff</div>
   </div>
-  <p>The differense here is the use of alpha transparency in the background-color, which isn't supported in IE8.</p>
-  <p>So IE8 would render this:</p>
+
+
+  <p>This can translate into a Photoshop layer style relativy well as a drop shadow.  The biggest problem is that the units of measurement are completely different.  In CSS we use horizonal and vertical positions to determine distance, while in PS its an angular.</p>
+
+  <img src="screenshot-004.png" width="600px">
+
+
+<code>
+    .demo003{</br>
+      background:#fff;<br/>
+      padding:10px;<br/>
+      color:#000;<br/>
+      box-shadow:2px 2px 4px 1px rgba(0,0,0,0.5);<br/>
+    }</br>
+</br>
+    &lt;div class="demo003"some stuff&gt;&lt;/div&gt;
+  </code>
   <style>
     .demo003{
-      background-color: rgb(17,142,200);
+      background:#fff;
+      padding:10px;
       color:#000;
+      box-shadow:2px 2px 4px 1px rgba(0,0,0,0.5);
     }
   </style>
+
   <div class="demo-wrapper">
     <div class="demo003">some stuff</div>
   </div>
-  <p>Another important distinction is that rgba and opacity use alpha transparency, or "blend mode normal" in Photoshop terms.</p>
 
-  <a href="css3-02.html" class="next-button">Drop Shadows</a>
+  <p>Translation is possible, but the units of measurement in recreating the shadow are pretty arbitrary.</p>
+
+  <a href="css3-04.html" class="next-button">Gradients</a>
   
 </body>
 </html>
