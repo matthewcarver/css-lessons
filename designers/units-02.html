@@ -12,7 +12,11 @@
 </head>
 <body>
   <h1>Pixels.</h1>
-  <p>A "px" is a unit of measurement in CSS that is commonly read as "pixel" or "screen pixel" in an absolute.  There has also been a false notion that the PX unit is a non-linear unit of measurement.</p>
+  <p>When you think of px, you probably think of this:</p>
+  <img src="http://photoclubalpha.com/wp-content/uploads/2008/01/microa700screen.jpg" width="600px">
+  <p>Or maybe this:</p>
+  <img src="http://static.trustedreviews.com/94/672d7c/c875/icon5.jpg">
+  <p>Unfortunately this isn't how CSS thinks of a px. These are screen pixels and they vary dramatically from machine to machine.  Some displays have more or less pixels per screen inch than others.  When you hear that a screen is 1024px wide, you might assume that there are 1 thousand and twenty four pixels in the width of the screen.  This isn't a big misunderstanding.</p>
   <p>The size of a px is defined by the browser by a establishing an anchor pixel.  This anchor pixel sets the stardard for all other pixels on the page.  So when you crack open Photoshop highlight some box and confidently announce that a box should be 30 pixels wide, what you are really saying is "the box should be 30 of my computers pixels wide on every computer there is".  Definately not an easy task.</p>
   <p>Px works this way due to variations in screen resolution.  For instance a pixel on a Retina Display iPhone is 1/4th the size of a pixel on a non retina iPhone, so the phone's software sets an ancor pixel to perserve consistency.  It's all pretty boring stuff.</p>
   <p>Also, px can only be expressed in whole units, so there is no such thing as a half pixel.</p>
